@@ -4,13 +4,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
     using System.Data.Entity;
-    using System.Transactions;
-    using System.Collections.Specialized;
-    using System.Diagnostics;
-    using System.Data.Common;
     using System.Data.SqlClient;
+    using System.Diagnostics;
 
     class Program
     {
@@ -72,7 +68,7 @@
                                 using (target = new People2Context(targetConnection, false))
                                 {
                                     target.Database.UseTransaction(targetTransaction);
-                                    target.Database.Log = l => Console.WriteLine(l);
+                                    //target.Database.Log = l => Console.WriteLine(l);
 
                                     // We expect the target table to have other entries, which we should not touch but
                                     // the result might be big and fat especially if the source table is highly fragmented

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EntityFramework.Utilities;
-using System.Data.Objects;
-using System.Data.Common;
-
-namespace DataSynchronizer
+﻿namespace DataSynchronizer
 {
+    using System.Collections.Generic;
+    using System.Data.Common;
+    using System.Data.Entity;
+    using EntityFramework.Utilities;
+
     public class People1Context : DbContext
     {
         public People1Context(DbConnection connection, bool contextOwnsConnection = false)
